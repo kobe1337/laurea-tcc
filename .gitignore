@@ -1,3 +1,3 @@
-*.sql
-*.mwb
+ignore/
 *.txt
+
