@@ -1,3 +1,3 @@
-model.mwb
-script.sql
+*.mwb
+*.sql
 *.txt
