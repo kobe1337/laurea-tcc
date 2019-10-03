@@ -1,4 +1,2 @@
-<<<<<<< HEAD
-ignore/
-*.txt
->>>>>>> developer
+/laurea/build/
+/laurea/dist/
