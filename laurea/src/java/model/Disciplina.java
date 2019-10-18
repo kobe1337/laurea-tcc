@@ -13,6 +13,11 @@ public class Disciplina {
         this.materia = materia;
     }
 
+    @Override
+    public String toString() {
+        return getMateria();
+    }
+    
     public int getIddisciplina() {
         return iddisciplina;
     }
@@ -29,8 +34,4 @@ public class Disciplina {
         this.materia = materia;
     }
 
-    @Override
-    public String toString() {
-        return getMateria();
-    }
 }
