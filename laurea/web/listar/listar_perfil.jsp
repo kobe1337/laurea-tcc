@@ -1,33 +1,24 @@
-<%-- 
-    Document   : index
-    Created on : 08/08/2019, 10:22:26
-    Author     : Administrador
---%>
-
 <%@page import="DAO.PerfilDAO"%>
 <%@page import="model.Perfil"%>
 <%@page import="java.util.ArrayList"%>
 <%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta content="width=device-width, 
-              initial-scale=1, maximum-scale=1, 
-              user-scalable=no"
-              name="viewport"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"/>
         <link rel="stylesheet" href="datatables/jquery.dataTables.min.css"/>
-        <title>JSP Page</title>
+        <title>Listagem Perfil</title>
         
         <script type="text/javascript">
             function confirmarExclusao(id, nome){
-                if(confirm('Deseja realmente excluir o perfil '+nome+' ?')){
+                if(confirm('Deseja realmente excluir o perfil "'+nome+'" ?')){
                     location.href='gerenciar_perfil.do?acao=excluir&idperfil='+id;
                 }
-                
             }
         </script>    
     </head>
@@ -40,8 +31,7 @@
             <a href="form_perfil.jsp" class="btn btn-primary">
                 Novo Cadastro
             </a>
-            <table class="table table-hover table-striped table-bordered display"
-                   id="listaPerfil">
+            <table class="table table-hover table-striped table-bordered display" id="listaPerfil">
                 <thead>
                     <tr>
                         <th>ID Perfil</th>

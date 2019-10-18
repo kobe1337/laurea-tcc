@@ -1,33 +1,24 @@
-<%-- 
-    Document   : index
-    Created on : 08/08/2019, 10:22:26
-    Author     : Administrador
---%>
-
 <%@page import="DAO.UsuarioDAO"%>
 <%@page import="model.Usuario"%>
 <%@page import="java.util.ArrayList"%>
 <%@taglib  prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-        <meta content="width=device-width, 
-              initial-scale=1, maximum-scale=1, 
-              user-scalable=no"
-              name="viewport"/>
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
         <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css"/>
         <link rel="stylesheet" href="datatables/jquery.dataTables.min.css"/>
-        <title>JSP Page</title>
+        <title>Listagem Usuário</title>
         
         <script type="text/javascript">
             function confirmarExclusao(id, nome){
-                if(confirm('Deseja realmente desativar o usuário '+nome+' ?')){
+                if(confirm('Deseja realmente desativar o usuário "'+nome+'" ?')){
                     location.href='gerenciar_usuario.do?acao=excluir&idusuario='+id;
                 }
-                
             }
         </script>    
     </head>
@@ -40,8 +31,7 @@
             <a href="form_usuario.jsp" class="btn btn-primary">
                 Novo Usuário
             </a>
-            <table class="table table-hover table-striped table-bordered display"
-                   id="listaUsuario">
+            <table class="table table-hover table-striped table-bordered display" id="listaUsuario">
                 <thead>
                     <tr>
                         <th>ID</th>
