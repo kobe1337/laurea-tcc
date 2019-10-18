@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 
 public class DataBaseDAO {
 
-    public final String URL = "jdbc:mysql://localhost:3306/laurea";
+    public final String URL = "jdbc:mysql://localhost:3306/projetolaurea";
     public final String USER = "root";
     public final String SENHA = "";
 
