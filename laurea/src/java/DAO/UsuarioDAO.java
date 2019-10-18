@@ -41,7 +41,7 @@ public class UsuarioDAO extends DataBaseDAO{
         try{
             String sql;
             this.conectar();
-            if(u.getIdusuario()==0){
+            if(u.getIdusuario() == 0){
                 sql = "INSERT INTO usuario(nome, login, senha, status, idperfil) VALUES(?,?,?,?,?) ";
             }else{
                 sql = "UPDATE usuario SET nome=?, login=?, senha=?, status=?, idperfil=? WHERE idusuario=?";

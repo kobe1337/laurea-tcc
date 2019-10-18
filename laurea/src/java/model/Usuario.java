@@ -23,7 +23,7 @@ public class Usuario {
 
     @Override
     public String toString() {
-        return getNome() + getLogin() +getSenha();
+        return getNome() + getLogin() + getSenha();
     }
 
     public int getIdusuario() {
@@ -77,4 +77,5 @@ public class Usuario {
     public void setStatus(int status) {
         this.status = status;
     }
+    
 }
