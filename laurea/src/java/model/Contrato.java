@@ -6,13 +6,13 @@ import java.time.format.DateTimeFormatter;
 public class Contrato {
     private int idcontrato, parcela, status;
     private String serie, escola, datacontrato;
-    private float preco;
+    private double preco;
     private Aluno aluno;
     
     public Contrato() {
     }
 
-    public Contrato(int idcontrato, int parcela, int status, String datacontrato, String serie, String escola, float preco, Aluno aluno) {
+    public Contrato(int idcontrato, int parcela, int status, String datacontrato, String serie, String escola, double preco, Aluno aluno) {
         this.idcontrato = idcontrato;
         this.parcela = parcela;
         this.status = status;
@@ -82,11 +82,11 @@ public class Contrato {
         this.escola = escola;
     }
 
-    public float getPreco() {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco(float preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 

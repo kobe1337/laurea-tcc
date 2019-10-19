@@ -6,13 +6,13 @@ import java.time.format.DateTimeFormatter;
 public class Mensalidade {
     private int idmensalidade, status;
     private String mes, datav, datap;
-    private float valor, multa, desconto;
+    private double valor, multa, desconto;
     private Contrato contrato;
     
     public Mensalidade() {
     }
 
-    public Mensalidade(int idmensalidade, int status, String mes, float valor, float multa, float desconto, Contrato contrato, String datav, String datap) {
+    public Mensalidade(int idmensalidade, int status, String mes, double valor, double multa, double desconto, Contrato contrato, String datav, String datap) {
         this.idmensalidade = idmensalidade;
         this.status = status;
         this.mes = mes;
@@ -24,13 +24,13 @@ public class Mensalidade {
         this.datap = datap;
     }
     
-    public String getDataVencimento(){
+    public String getFormatDataVencimento(){
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
         LocalDate data = LocalDate.parse(datav, formato);
         return (formato.format(data));
     }
     
-    public String getDataPagamento(){
+    public String getFormatDataPagamento(){
         DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy"); 
         LocalDate data = LocalDate.parse(datap, formato);
         return (formato.format(data));
@@ -38,7 +38,7 @@ public class Mensalidade {
     
     @Override
     public String toString() {
-        return getMes() + getDataVencimento() + getDataPagamento() ;
+        return getMes() + getFormatDataVencimento() + getFormatDataPagamento() ;
     }
 
     public int getIdmensalidade() {
@@ -65,27 +65,27 @@ public class Mensalidade {
         this.mes = mes;
     }
 
-    public float getValor() {
+    public double getValor() {
         return valor;
     }
 
-    public void setValor(float valor) {
+    public void setValor(double valor) {
         this.valor = valor;
     }
 
-    public float getMulta() {
+    public double getMulta() {
         return multa;
     }
 
-    public void setMulta(float multa) {
+    public void setMulta(double multa) {
         this.multa = multa;
     }
 
-    public float getDesconto() {
+    public double getDesconto() {
         return desconto;
     }
 
-    public void setDesconto(float desconto) {
+    public void setDesconto(double desconto) {
         this.desconto = desconto;
     }
 

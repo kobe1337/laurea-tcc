@@ -2,13 +2,13 @@ package model;
 
 public class Pendencia {
     private int idpendencia;
-    private float valor;
+    private double valor;
     private Aluno aluno;
 
     public Pendencia() {
     }
 
-    public Pendencia(int idpendencia, float valor, Aluno aluno) {
+    public Pendencia(int idpendencia, double valor, Aluno aluno) {
         this.idpendencia = idpendencia;
         this.valor = valor;
         this.aluno = aluno;
@@ -27,11 +27,11 @@ public class Pendencia {
         this.idpendencia = idpendencia;
     }
 
-    public float getValor() {
+    public double getValor() {
         return valor;
     }
 
-    public void setValor(float valor) {
+    public void setValor(double valor) {
         this.valor = valor;
     }
 
